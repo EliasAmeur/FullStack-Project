@@ -1,0 +1,28 @@
+<div class="container-sm">
+  <h1>Your Cart</h1>
+
+  <mat-card>
+    <mat-list>
+      <mat-list-item *ngFor="let item of cartItems">
+        <!-- Check if product exists and then access its properties -->
+        <span matListItemTitle>{{item.name}}</span>
+        <span matListItemLine>{{item.price | currency:'CAD':'symbol'}}</span>
+        <!-- Display size and quantity -->
+        <span matListItemLine>Size: {{item.size}}</span>
+      </mat-list-item>
+
+      <mat-list-item>
+        <span class="price" matListItemTitle>Total (CAD)</span>
+        <span class="price" matListItemLine>{{totalPrice | currency:'CAD':'symbol'}}</span>
+      </mat-list-item>
+
+      <mat-list-item class="text-right">
+        <button mat-flat-button (click)="clearCart()">Clear</button>
+      </mat-list-item>
+
+      <mat-list-item class="text-right">
+        <button mat-raised-button color="accent" (click)="checkout()">Checkout</button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card>
+</div>

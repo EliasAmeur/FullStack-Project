@@ -1,0 +1,223 @@
+{
+  "uuid": "02cd599d-f584-4ae0-8603-ae6cc8ccb9d2",
+  "lastMigration": 28,
+  "name": "True Performance Athletics Store",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 4200,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "e9f55b96-6ba7-49c6-aa4b-bae15ec9b2d8",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "products",
+      "responses": [
+        {
+          "uuid": "6fd32498-3e8e-4f65-9b50-2302e7f9e512",
+          "body": "[\r\n    {\r\n        \"id\": 1,\r\n        \"name\": \"Grey Crewneck V1\",\r\n        \"price\": 59.99,\r\n        \"image_url\": \"assets/images/Grey_crew.jpg\"\r\n    },\r\n    {\r\n        \"id\": 2,\r\n        \"name\": \"Black Crewneck V1\",\r\n        \"price\": 59.99,\r\n        \"image_url\": \"assets/images/black_crew.jpg\"\r\n    },\r\n    {\r\n        \"id\": 3,\r\n        \"name\": \"Grey Hoodie\",\r\n        \"price\": 69.99,\r\n        \"image_url\": \"assets/images/grey_hoodie.jpg\"\r\n    },\r\n    {\r\n        \"id\": 4,\r\n        \"name\": \"Black Hoodie V1\",\r\n        \"price\": 69.99,\r\n        \"image_url\": \"assets/images/black_hoodie1.jpg\"\r\n    },\r\n    {\r\n        \"id\": 5,\r\n        \"name\": \"Black Hoodie V2\",\r\n        \"price\": 69.99,\r\n        \"image_url\": \"assets/images/black_hoodie3.jpg\"\r\n    },\r\n    {\r\n        \"id\": 6,\r\n        \"name\": \"Grey Crewneck V2\",\r\n        \"price\": 79.99,\r\n        \"image_url\": \"assets/images/grey_crew2.jpg\"\r\n    },\r\n    {\r\n        \"id\": 7,\r\n        \"name\": \"Black Crewneck V2\",\r\n        \"price\": 79.99,\r\n        \"image_url\": \"assets/images/black_crew2.jpg\"\r\n    }",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "fd775a8f-d467-467e-900b-3b43265c18be",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "cart",
+      "responses": [
+        {
+          "uuid": "cb6d2816-d358-485e-ad28-b8b91f879b78",
+          "body": "[\r\n    {\r\n        \"id\": 3,\r\n        \"name\": \"Iguana\",\r\n        \"price\": 49,\r\n        \"image_url\": \"Product_03.jpg\"\r\n    },\r\n    {\r\n        \"id\": 3,\r\n        \"name\": \"Iguana\",\r\n        \"price\": 49,\r\n        \"image_url\": \"Product_03.jpg\"\r\n    },\r\n    {\r\n        \"id\": 9,\r\n        \"name\": \"Cat 2\",\r\n        \"price\": 79,\r\n        \"image_url\": \"Product_09.jpg\"\r\n    },\r\n    {\r\n        \"id\": 10,\r\n        \"name\": \"Deer Stag\",\r\n        \"price\": 99,\r\n        \"image_url\": \"Product_10.jpg\"\r\n    }\r\n]\r\n",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "bdf50852-749b-4b76-8db4-fb2a8ab0bb1e",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "cart",
+      "responses": [
+        {
+          "uuid": "736b4dd5-18b2-4597-ad52-8014cc48a466",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "59a081b2-b730-4713-af62-00f310021813",
+      "type": "http",
+      "documentation": "",
+      "method": "delete",
+      "endpoint": "cart",
+      "responses": [
+        {
+          "uuid": "493a0a65-1707-4de9-8adf-4c436e7b9d1b",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "38841929-1dbe-494a-bb03-aa7215fd85be",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "checkout",
+      "responses": [
+        {
+          "uuid": "c01f0613-7c99-44a7-b5f2-53b6dc7cb9bb",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "e9f55b96-6ba7-49c6-aa4b-bae15ec9b2d8"
+    },
+    {
+      "type": "route",
+      "uuid": "fd775a8f-d467-467e-900b-3b43265c18be"
+    },
+    {
+      "type": "route",
+      "uuid": "bdf50852-749b-4b76-8db4-fb2a8ab0bb1e"
+    },
+    {
+      "type": "route",
+      "uuid": "59a081b2-b730-4713-af62-00f310021813"
+    },
+    {
+      "type": "route",
+      "uuid": "38841929-1dbe-494a-bb03-aa7215fd85be"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}

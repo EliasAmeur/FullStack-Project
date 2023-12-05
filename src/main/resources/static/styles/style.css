@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif; /* You can use any font you prefer */
+    font-size: 1.1rem;
+    background: url('../full/full_black.png') no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.949);
+}
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    overflow: hidden;
+}
+
+.section {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);  /* Start sections below the viewport */
+    transition: transform 0.5s;  /* Adjust the time as needed */
+}
+
+.active {
+    transform: translateY(0);  /* Bring the active section into the viewport */
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(-100%); /* Moves the section upwards */
+}
+
+#section1 {
+   
+    opacity: 1; /* initially visible */
+}
+
+
+#p1{
+    font-family:'Orbitron', sans-serif;
+    text-decoration: none;
+    color:aquamarine
+}
+
+#missionheader {
+    font-family:'Orbitron', sans-serif;
+    text-decoration: none;
+    color:white;
+    font-size:xx-large;
+}
+
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+
+
+
+.motivational-text {
+    font-family:'Orbitron', sans-serif;
+    text-decoration: none;
+    max-width: 50%;
+    text-align: justify;
+}
+.image-left, .trainer-image {
+    width: auto;
+    height:90%;
+    margin-right: 20px;
+}
+
+.contact-info {
+    color: aquamarine;
+    max-width: 50%;
+}
+#contactHeader{
+  color:#fff;
+}
+#emailHead{
+  color:#fff;
+}
+#phoneHead{
+    color:#fff;
+}
+#addressHead{
+    color:#fff;
+}
+
+.menu {
+  font-family:'Orbitron', sans-serif;
+  text-decoration: none;
+  position: fixed;
+  top: 10px; 
+  left: 50%; 
+  transform: translateX(-50%); /* This ensures the menu is always centered */
+  z-index: 1000; /* This ensures the menu is always on top */
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu li {
+  margin: 0 15px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: aquamarine;
+  padding: 5px 10px;
+  position:relative;
+  background-color: rgba(0, 0, 0, 0); /* slightly transparent black background */
+  border-radius: 4px;
+  transition: background-color 0.3s; /* smooth transition for hover effect */
+}
+.menu a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%; /* Start with 0 width */
+  height: 2px; /* The height of the underline */
+  background-color: aquamarine;
+  transition: width 0.3s; /* Animate the width on hover */
+}
+
+.menu a:hover {
+  background-color: rgba(0, 0, 0, 1.0); /* darker background on hover */
+}
+.menu a:hover::after {
+  width: 100%; /* Full width on hover */
+}
+
+/* #welcomeheader{
+    color:white;
+} */
+
+#welcomeMessage {
+    
+    color:white;
+    font-size:x-Large;
+    text-align: center;
+    padding: 100px;
+}
+.welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* full viewport height */
+}
+
+.welcome-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%; /* leaving some space on the sides */
+    max-width: 1200px; /* setting a maximum width */
+    margin: 0 auto; /* centering the content if it's less than the max-width */
+}
+
+.welcome-image {
+    width: 33%; /* divide by the number of images */
+    max-width: 400px; /* maximum width for each image */
+    margin: 0 10px; /* spacing between images */
+    height: auto; /* maintain image aspect ratio */
+}
+
+
+.video-container {
+    position: relative;
+    width: 50%;
+    height:85%;
+    margin: 5% auto;  /* Gives vertical spacing */
+    overflow: hidden;
+
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    transform: translate(-50%, -50%);  /* This centers the video */
+    object-fit: fill;
+}
+
+.video-switcher {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: aquamarine;
+    border: 1px solid aquamarine;  /* Properly define the border */
+    cursor: pointer;
+    z-index:10;
+}
+.video-controls {
+    position: absolute;
+    bottom: 10px; /* Adjust this value if needed */
+    left: 30%;
+    display: flex;
+    align-items: center;
+    z-index:10;
+
+}
+
+.video-control-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: aquamarine;
+    border: 1px solid aquamarine;
+    padding: 5px 10px;
+    cursor: pointer;
+    z-index:10;
+}
+
+.video-slider {
+    appearance: none;
+    background: aquamarine;
+    height: 3px;
+    width: 100px;
+    border-radius: 3px;
+    outline: none;
+    z-index:10;
+}
+
+.video-slider::-webkit-slider-thumb {
+    appearance: none;
+    height: 10px;
+    width: 10px;
+    background: aquamarine;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index:10;
+}
+
+.video-slider::-moz-range-thumb {
+    height: 10px;
+    width: 10px;
+    background: aquamarine;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index:10;
+}
+
+#prevVideo {
+    left: 5px;
+}
+
+#nextVideo {
+    right: 5px;
+}
+
+/* -- YouTube Link Styles -- */
+
+#insta-link {
+    top: 60px;
+  }
+  
+  #insta-link > i {
+    color: rgb(94, 106, 210);
+  }
+  
+  #yt-link {  
+    top: 10px;
+  }
+  
+  #yt-link > i {
+    color: rgb(219, 31, 106); 
+  
+  }
+
+  #fb-link {
+    top:110px;
+  }
+
+  #fb-link>i{
+    color:blue;
+  }
+  
+  .meta-link {
+    align-items: center;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;  
+    display: inline-flex;
+    gap: 5px;
+    left: 10px;
+    padding: 10px 20px;
+    position: fixed;
+    text-decoration: none;
+    transition: background-color 600ms, border-color 600ms;
+    z-index: 10000;
+  }
+  
+  .meta-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .meta-link > i, .meta-link > span {
+    height: 20px;
+    line-height: 20px;
+  }
+  
+  .meta-link > span {
+    color: white;
+    font-family: "Orbitron", sans-serif;
+    transition: color 600ms;
+  }
+
+  .title_slider {
+    font-size: 2.5rem;
+    font-family: 'Orbitron', sans-serif;
+    line-height: 1.1;
+    font-weight: 300;
+    color: #fff;
+    margin: 4rem auto 1rem;
+    width: 85%;
+    max-width: 1280px;
+    
+  }
+  
+  .slider {
+    width: 85%;
+    max-width: 1280px;
+    margin: 0 auto;
+   
+  }
+
+ 
+
+  .slider__content {
+    overflow-x: scroll;
+    -ms-scroll-snap-type: x mandatory;
+        scroll-snap-type: x mandatory;
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    scrollbar-color: var(--scrollcolor) var(--scrollbackground);
+  }
+  .slider__content::-webkit-scrollbar {
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 1rem;
+    background: var(--scrollbackground);
+  }
+  .slider__content::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background: var(--scrollcolor);
+  }
+  .slider__content::-webkit-scrollbar-track {
+    border-radius: 1rem;
+    background: var(--scrollbackground);
+  }
+  
+  .slider__item {
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-width: 100%;
+    width: 100%;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 1;
+  }
+  @media (min-width: 460px) {
+    .slider__item {
+      aspect-ratio: 2/3;
+      min-width: calc((100% / 2) - 2rem);
+    }
+  }
+  @media (min-width: 940px) {
+    .slider__item {
+      min-width: calc((100% / 3) - 4rem);
+    }
+  }
+  
+  .slider__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .slider__info {
+    position: relative;
+    padding: 4rem 2rem 2rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(32, 50, 57, 0));
+  }
+  .slider__info h2 {
+    color: #fff;
+    font-family: system-ui;
+    line-height: 1.1;
+    font-weight: 300;
+    font-size: 1.75rem;
+    margin: 0;
+  }
+  
+  .slider__nav {
+    margin: 1rem 0 4rem;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    align-content: center;
+    align-items: center;
+    pointer-events: none;
+  }
+  @media (min-width: 460px) {
+    .slider__nav {
+      justify-content: flex-end;
+    }
+  }
+  
+  .slider__nav__button {
+    margin: 0;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border: 0;
+    border-radius: 2rem;
+    background: #fff;
+    color: #203239;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    line-height: 1;
+    pointer-events: none;
+    transition: 0.2s ease-out;
+    opacity: 0.25;
+  }
+  .slider__nav__button--active {
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+  }

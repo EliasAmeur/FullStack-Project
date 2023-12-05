@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRUE PERFORMANCE ATHLETICS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/styles/stylelogin.css"/>
+    <link rel="icon" href="/emblem/emblem_color.png" type="image/png">
+
+    
+</head>
+<body>
+
+    <div class="menu">
+        <ul>
+            <li><a th:href="@{/}">Home</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h1 class="site-title">True Performance Athletics</h1>
+        <div class="box">
+
+            <form id="loginForm" method="post" action="/login">
+
+                <h2>Login</h2>
+
+                <div class="inputbox">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="email" name="email" id="emailInput" required placeholder=" ">
+                    <label for="emailInput">Email:</label>
+                </div>
+
+                <div class="inputbox">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" name="password" id="passwordInput" required placeholder=" ">
+                    <label for="passwordInput">Password:</label>
+                </div>
+
+                <button type="submit"> Log In</button>
+
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <script src="../scriptLogin.js"></script>
+
+</body>
+</html>

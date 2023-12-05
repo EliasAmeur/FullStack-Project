@@ -1,0 +1,38 @@
+.product-card{
+  padding:10px;
+  max-width:200px;
+  font-family: Orbitron, sans-serif;
+}
+
+.size-form-field{
+  width:100%;
+}
+
+h2{
+  color:aquamarine;
+  font-family: Orbitron, sans-serif;
+}
+
+.add-to-cart-button{
+  background-color: aquamarine;
+  color: black;
+}
+
+mat-card-content{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+
+mat-card:hover{
+    transform: scale(1.05);
+    cursor:pointer;
+}
+mat-card{
+    transition: transform .2s;
+}
+
+.sort-dropdown{
+    margin-left:20px;
+}

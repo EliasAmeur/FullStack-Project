@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRUE PERFORMANCE ATHLETICS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" href="/emblem/emblem_color.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="/styles/stylepricing.css">
+
+
+</head>
+<body>
+
+  <div class="menu">
+    <ul>
+        <li><a th:href="@{/}">Home</a></li>
+        <li><a th:href="@{book}">Book a Consultation</a></li>
+        <li><a th:href="@{/pricing}">Pricing</a></li>
+        <li><a th:href="@{login}">Login</a></li>
+        <li><a th:href="@{/trainer}">TrainerHUB</a></li>
+        <!-- Add more list items if you have more sections or links -->
+    </ul>
+</div>
+    <main class="main flow">
+        <h1 class="main__heading">Pricing</h1>
+        <div class="main__cards cards">
+          <div class="cards__inner">
+            <div class="cards__card card">
+              <h2 class="card__heading">Basic</h2>
+              <p class="card__price">$29.99/Month</p>
+              <ul role="list" class="card__bullets flow">
+                <li>Access to standard workouts and nutrition plans</li>
+                <li>Email support</li>
+              </ul>
+              <a href="#basic" class="card__cta cta">Get Started</a>
+            </div>
+      
+            <div class="cards__card card">
+              <h2 class="card__heading">Pro</h2>
+              <p class="card__price">$69.99/Month</p>
+              <ul role="list" class="card__bullets flow">
+                <li>Access to advanced workouts and nutrition plans</li>
+                <li>Priority Email support</li>
+                <li>Exclusive access to live Q&A sessions</li>
+              </ul>
+              <a href="#pro" class="card__cta cta">Upgrade to Pro</a>
+            </div>
+      
+            <div class="cards__card card">
+              <h2 class="card__heading">Ultimate</h2>
+              <p class="card__price">$199.99/Month</p>
+              <ul role="list" class="card__bullets flow">
+                <li>Access to all premium workouts and nutrition plans</li>
+                <li>24/7 Priority support</li>
+                <li>1-on-1 virtual coaching session every month</li>
+                <li>Exclusive content and early access to new features</li>
+              </ul>
+              <a href="#ultimate" class="card__cta cta">Go Ultimate</a>
+            </div>
+          </div>
+          
+          <div class="overlay cards__inner"></div>
+        </div>
+      </main>
+
+      <!--Social Liks codings below-->
+        <a id="source-link" class="meta-link" href="https://www.instagram.com/trueperformanceathletics/" target="_blank">
+            <i class="fab fa-instagram"></i>
+            <span class="roboto-mono">INSTAGRAM</span>
+        </a>
+
+        <a id="yt-link" class="meta-link" href="https://www.youtube.com/" target="_blank">
+            <i class="fab fa-youtube"></i>
+          <span>YOUTUBE</span>
+        </a>
+
+        <a id="fb-link" class="meta-link" href="https://www.facebook.com/" target="_blank">
+          <i class="fab fa-facebook"></i>
+          <span>FACEBOOK</span>
+        </a>
+      <script src="../scriptPricing.js"></script>
+      <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</body>
+</html>

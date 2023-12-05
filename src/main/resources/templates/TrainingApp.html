@@ -1,0 +1,71 @@
+
+<html xmlns:th="http://www.thymeleaf.org" lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRUE PERFORMANCE ATHLETICS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/styles/styleTraining.css"/>
+    <link rel="icon" href="/emblem/emblem_color.png" type="image/png">
+
+
+</head>
+<body>
+<header class="page_header relative">
+    <div class="navbar">
+        <div class="navbar_header" >
+            <a class="navbar_brand" data-logo="LOGOUT" th:href="@{/}"><span class="brand_logo"><span class="hide">LOGOUT</span></span></a>
+            <button class="navbar_opener"><span></span><span></span><span></span><span></span></button>
+        </div>
+        <div class="navbar_menu">
+            <nav class="menu" data-reactid="16">
+                <ul class="menu_list menu_list-main" data-reactid="17">
+                    <li class="menu_item menu_item-big" data-reactid="18">
+                        <a class="menu_link menu_link-anim" th:href="@{/trainer/clients}" data-reactid="19">
+                            <span class="link_layer" data-text="View All Clients" data-reactid="20"></span>View All Clients
+                        </a>
+                    </li>
+                    <li class="menu_item menu_item-big" data-reactid="22">
+                        <a class="menu_link menu_link-anim" th:href="@{/trainer/clients/new}" data-reactid="23">
+                            <span class="link_layer" data-text="Add a new Client" data-reactid="24"></span>Add a new Client
+                        </a>
+                    </li>
+                    <li class="menu_item menu_item-big" data-reactid="26">
+                        <a class="menu_link menu_link-anim" th:href="@{/trainer/trainingplan/new}"  data-reactid="27">
+                            <span class="link_layer" data-text="Create a Training Program" data-reactid="28"></span>Create a Training Program
+                        </a>
+                    </li>
+                </ul>
+                <ul class="menu_list menu_list-alter" data-reactid="38">
+                    <li class="menu_item" data-reactid="39">
+                        <a class="menu_link" href="/blog" data-reactid="40">
+                            <span class="link_layer" data-text="Blog" data-reactid="41"></span>Blog
+                        </a>
+                    </li>
+                    <li class="menu_item" data-reactid="43">
+                        <a class="menu_link" href="/events" data-reactid="44">
+                            <span class="link_layer" data-text="Events" data-reactid="45"></span>Events
+                        </a>
+                    </li>
+                    <li class="menu_item" data-reactid="47">
+                        <a class="menu_link" th:href="@{/}" data-reactid="48">
+                            <span class="link_layer" data-text="Logout" data-reactid="49"></span>Logout
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <section>
+        <h1 data-text="hub">TRUE PERFORMANCE ATHLETICS HUB</h1>
+    </section>
+</header>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="scriptTrainingApp.js">
+    // $('.navbar_opener').on('click',()=>{
+    //     $('.navbar').toggleClass('navbar-opened')
+    // })
+</script>
+</body>
+</html>

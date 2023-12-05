@@ -1,0 +1,128 @@
+
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+    <head>
+        <title>TRUE PERFORMANCE ATHLETICS</title>
+        <link rel="stylesheet" type="text/css" href="/styles/style.css"/>
+        <link rel="icon" href="/emblem/emblem_color.png" type="image/png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <link rel="manifest" href="/manifest.json">
+    </head>
+    <body>
+        <div class="menu">
+            <ul>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a th:href="@{/pricing}">Pricing</a></li>
+                <li><a th:href="@{/login}">Login</a></li>
+                <li><a th:href="@{/trainer}">TrainerHUB</a></li>
+                <li><a href="/store">Store</a></li>
+            </ul>
+        </div>
+        
+        <div class="section welcome" id="welcome">
+            <div class="welcome-content">
+                <img src="swords/swords_teal.png" alt="Image 1" class="welcome-image">
+                <img src="full/full_white.png" alt="Image 2" class="welcome-image">
+                <img src="swords/swords_teal.png" alt="Image 3" class="welcome-image">
+            </div>           
+        </div>
+
+        <div class="section" id="section1">
+            <div class="content">
+                <img src="emblem/emblem_white.png" alt="Trainer Image" class="trainer-image">
+                <div class="motivational-text">
+                    <h1 id="missionheader">MISSION</h1>
+                    <p id="p1">
+                        Embarking on a fitness journey with True Performance Athletics is more than just physical transformation. 
+                        It's about elevating every facet of your life. Our dedicated trainer is committed to understanding your unique needs and aspirations. 
+                        With a personalized approach, we ensure that each session pushes you closer to your goals, instilling confidence and resilience that transcends the gym. 
+                        Elevate your life, experience the transformation, and witness how fitness can redefine your potential.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section" id="section3">
+        <h1 class="title_slider">Client Highlights</h1>
+        
+            <div class="slider"  x-data="{start: true, end: false}">
+            <div class="slider__content" x-ref="slider" x-on:scroll.debounce="$refs.slider.scrollLeft == 0 ? start = true : start = false; Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) < 5 ? end = true : end = false;">
+                <div class="slider__item">
+                <img class="slider__image" src="TPA/photo1.jpg" alt="Image">
+                <div class="slider__info">
+                    <h2></h2>
+                </div>
+                </div>
+                <div class="slider__item">
+                <img class="slider__image" src="TPA/photo5.jpg" alt="Image">
+                <div class="slider__info">
+                    <h2></h2>
+                </div>
+                </div>
+                <div class="slider__item">
+                <img class="slider__image" src="TPA/photo4.jpg" alt="Image">
+                <div class="slider__info">
+                    <h2></h2>
+                </div>
+                </div>
+                <div class="slider__item">
+                <img class="slider__image" src="TPA/photo22.jpeg" alt="Image">
+                <div class="slider__info">
+                    <h2></h2>
+                </div>
+                </div>
+                <div class="slider__item">
+                <img class="slider__image" src="TPA/photo33.jpg" alt="Image">
+                <div class="slider__info">
+                    <h2></h2>
+                </div>
+                </div>
+                <div class="slider__item">
+                <img class="slider__image" src="TPA/photo6.jpg" alt="Image">
+                <div class="slider__info">
+                    <h2></h2>
+                </div>
+                </div>
+               
+            </div>
+            <div class="slider__nav">
+                <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth * -1, behavior: 'smooth'});" x-bind:class="start ? '' : 'slider__nav__button--active'">Previous</button>
+                <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth, behavior: 'smooth'});" x-bind:class="end ? '' : 'slider__nav__button--active'">Next</button>
+            </div>
+            </div>
+        </div>
+        
+        
+        <div class="section" id="section2">
+            <div class="content">
+                <img src="../TPA/tritri.png" alt="Second Image" class="image-left">
+                <div class="contact-info">
+                    <h2 id="contactHeader">Contact Me</h2>
+                    <p><strong id="emailHead">Email:</strong> trueperformanceathletics@gmail.com</p>
+                    <p><strong id="phoneHead">Phone:</strong> +123-456-7890</p>
+                    <p><strong id="addressHead">Address:</strong> 123 Fitness Lane, Health City, J0J0J0</p>
+                    <p>Feel free to reach out for any queries, booking sessions, or personalized advice. 
+                        I'm here to help and guide you on your fitness journey.</p>
+                </div>
+            </div>
+        </div>
+  <!--Social Liks codings below-->
+        <a id="insta-link" class="meta-link" href="https://www.instagram.com/trueperformanceathletics/" target="_blank">
+            <i class="fab fa-instagram"></i>
+            <span class="roboto-mono">INSTAGRAM</span>
+        </a>
+
+        <a id="yt-link" class="meta-link" href="https://www.youtube.com/" target="_blank">
+            <i class="fab fa-youtube"></i>
+        <span>YOUTUBE</span>
+        </a>
+        
+        <a id="fb-link" class="meta-link" href="https://www.facebook.com/" target="_blank">
+            <i class="fab fa-facebook"></i>
+        <span>FACEBOOK</span>
+        </a>
+
+
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    </body>
+</html>
